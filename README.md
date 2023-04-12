@@ -1,11 +1,10 @@
 # Operationalizing Machine Learning Final Project
-
 In this project, I build an end-to-end ML model pipeline with the Bank Marketing dataset. I discuss how to train a model through the Azure ML Studio, publishing the pipeline, and consuming it so that we can make predictions through an API request.
 
 
 
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
+![architecture](sample_screenshots/architecture.PNG)
 
 
 
@@ -13,7 +12,7 @@ In this project, I build an end-to-end ML model pipeline with the Bank Marketing
 
 
 ### 1. Authentication
-I must create a Service Principal using az. However, since I used the VM, I was unable to cdo this because I did not have the prpoert permissions.
+I must create a Service Principal using az. However, since I used the VM, I was unable to do this because I did not have the proper permissions.
 
 ### 2. Automated ML Experiment
 The next step is to create an experiment using Automated ML, configure a compute cluster, and use that cluster to run the experiment. Using the Bank Marketing dataset,  I trained the data using a binary classification model (the target column being `y`) to identify customers who were influenced by the bank's marketing campaign. Below are screenshots of the uploaded data and the finished experiment.
@@ -53,8 +52,26 @@ We can see that the pipeline consists of two parts: the dataset and the AutoML m
 
 
 
+## Improvements
+- Look into the different target metrics to improve the imbalanced classes of the dataset
+- Be able to see the actual API request in Swagger UI (instead of example request and responses)
+- Be able to configure own cluster and enable deep learning to improve model performance
+
+
+
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+The screen cast can be found in `sample_screenshots/mimi-course-2.mp4`. Because my computer does not have a microphone, I'm unable to provide audio. Instead, I have provided a script with corresponding timestamps.
+
+0:00:00 - 0:00:29
+Here I am showing my working deployed ML model endpoint. I use the terminal to run the `endpoint.py` script to make predictions for two data points (example customers). It predicts respectively, yes and no, to being influenced by the bank marketing campaign. The script is also replaced with the endpoint's scoring URI and key and so it has conducted the API request successfully as well.
+
+0:00:30 - 0:01:02
+Here I am showcasing my deployed pipeline. If we go under the tab Pipeline and click on Pipeline endpoints, you can see the published pipeline. Clicking on it, you can also see the REST endpoint and that it is active.
+
+0:01:03 --
+Finishing off the video, I show one of the finished AutoML experiement and job that was deployed through the pipeline.
+
+
 
 
 
