@@ -85,7 +85,7 @@ Now that the model is deployed, I need to make sure the model is performing cons
 
 ## missing screenshots
 ![complete](sample_screenshots/completed-pipeline-run.png)
-![active](sample_screenshots/pipeline-endpoint-active.png)
+![active](sample_screenshots/pipeline-endpoint-active.PNG)
 
 I continue to have an issue with running RunDetails code; cannot get the widget to work. It says it cannot find the model.
 
