@@ -1,4 +1,8 @@
 # Operationalizing Machine Learning Final Project
+
+## UPDATE 4/16/2023: CHANGES HAVE BEEN ADDED TO THE OVERVIEW AND BOTTOM
+
+## Overview
 In this project, I build an end-to-end ML model pipeline with the Bank Marketing dataset. I discuss how to train a model through the Azure ML Studio, publishing the pipeline, and consuming it so that we can make predictions through an API request.
 
 
@@ -70,6 +74,26 @@ Here I am showcasing my deployed pipeline. If we go under the tab Pipeline and c
 
 0:01:03 --
 Finishing off the video, I show one of the finished AutoML experiement and job that was deployed through the pipeline.
+
+
+# Changes
+Here are some details on benchmarking and missing screenshots.
+
+## Benchmarking
+Now that the model is deployed, I need to make sure the model is performing consistently. Using Apache Benchmark, I am able to get an estimate on the number of requests the model can gandle and its precision and accuracy. The screenshot shows it took 0.800 seconds for the model to complete 10 requests for an average of 80 ms per request.
+![benchmark](sample_screenshots/benchmark.png)
+
+## missing screenshots
+![active](sample_screenshots/completed-pipeline-run.png)
+![benchmark](sample_screenshots/pipeline-endpoint-active.png)
+
+I continue to have an issue with running RunDetails code; cannot get the widget to work. It says it cannot find the model.
+
+
+
+
+
+
 
 
 
